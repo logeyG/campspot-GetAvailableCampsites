@@ -1,0 +1,8 @@
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites\bin\Debug\GetAvailableCampsites.exe.config
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites\bin\Debug\GetAvailableCampsites.exe
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites\bin\Debug\GetAvailableCampsites.pdb
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites\bin\Debug\Newtonsoft.Json.dll
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites\bin\Debug\Newtonsoft.Json.xml
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites\obj\Debug\GetAvailableCampsites.csprojResolveAssemblyReference.cache
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites\obj\Debug\GetAvailableCampsites.exe
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites\obj\Debug\GetAvailableCampsites.pdb

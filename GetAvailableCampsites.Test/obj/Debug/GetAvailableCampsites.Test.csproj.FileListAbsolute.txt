@@ -1,0 +1,10 @@
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites.Test\bin\Debug\GetAvailableCampsites.Test.dll
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites.Test\bin\Debug\GetAvailableCampsites.Test.pdb
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites.Test\bin\Debug\GetAvailableCampsites.exe
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites.Test\bin\Debug\Newtonsoft.Json.dll
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites.Test\bin\Debug\GetAvailableCampsites.pdb
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites.Test\bin\Debug\Newtonsoft.Json.xml
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites.Test\obj\Debug\GetAvailableCampsites.Test.csprojResolveAssemblyReference.cache
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites.Test\obj\Debug\GetAvailableCampsites.Test.dll
+c:\users\lgabriel\documents\visual studio 2015\Projects\GetAvailableCampsites\GetAvailableCampsites.Test\obj\Debug\GetAvailableCampsites.Test.pdb
