@@ -9,15 +9,23 @@ using Newtonsoft.Json.Schema;
 
 namespace GetAvailableCampsites
 {
-    public class GetAvailableCampsitesProgram
+    public class Campspot
     {
         private static readonly int NEW_RESERVATION = 0;
 
         static void Main(string[] args)
         {
-            var campsites = GetAvailableCampsites(LoadJson("test-case.json"));           
-            campsites.ForEach(x => Console.WriteLine(x.Name));
-            Console.ReadLine();
+            if (args.Length == 1 && args[0].Contains(".json"))
+            {
+                var campsites = GetAvailableCampsites(LoadJson(args[0]));
+                campsites.ForEach(x => Console.WriteLine(x.Name));
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("This program only accepts 1 command line argument that must be the path of a valid .json file.");
+                Console.ReadLine();
+            }          
         }
 
         public static GetAvailableCampsitesRequest LoadJson(string filename)
@@ -34,13 +42,18 @@ namespace GetAvailableCampsites
         {
             if (request.Search == null)
             {
-                throw new ArgumentException();
+                throw new ArgumentException("You must submit search dates");
+            }
+
+            if (request.Search.EndDate < request.Search.StartDate)
+            {
+                throw new ArgumentException("The search end date must be AFTER the search start date");
             }
 
             if (request.Campsites.Count == 0 || request.Campsites == null)
             {
-                throw new ArgumentException();
-            }         
+                throw new ArgumentException("You must select campsites in the request");
+            }
         }
 
         public static List<Campsite> GetAvailableCampsites(GetAvailableCampsitesRequest request)

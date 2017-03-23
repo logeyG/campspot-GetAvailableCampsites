@@ -9,8 +9,8 @@ namespace GetAvailableCampsites.Test
     public class Tests
     {
 
-        public GetAvailableCampsitesRequest MockRequestSimple(SearchDates searchDates, 
-            List<GapRule> gapRules, 
+        public GetAvailableCampsitesRequest MockRequestSimple(SearchDates searchDates,
+            List<GapRule> gapRules,
             List<Reservation> reservations)
         {
             var campsites = new List<Campsite>
@@ -65,7 +65,7 @@ namespace GetAvailableCampsites.Test
             };
 
             var request = MockRequestSimple(searchDates, gapRules, new List<Reservation>());
-            var campsites = GetAvailableCampsitesProgram.GetAvailableCampsites(request);
+            var campsites = Campspot.GetAvailableCampsites(request);
 
             Assert.AreEqual(request.Campsites.Count, campsites.Count);
         }
@@ -96,7 +96,7 @@ namespace GetAvailableCampsites.Test
             };
 
             var request = MockRequestSimple(searchDates, new List<GapRule>(), reservations);
-            var campsites = GetAvailableCampsitesProgram.GetAvailableCampsites(request);
+            var campsites = Campspot.GetAvailableCampsites(request);
 
             Assert.AreEqual(request.Campsites.Count, campsites.Count);
         }
@@ -136,7 +136,7 @@ namespace GetAvailableCampsites.Test
             };
 
             var request = CreateMockRequest(searchDates, new List<Campsite>(), gapRules, reservations);
-            var campsites = GetAvailableCampsitesProgram.GetAvailableCampsites(request);
+            var campsites = Campspot.GetAvailableCampsites(request);
         }
 
         [ExpectedException(typeof(ArgumentException))]
@@ -161,7 +161,7 @@ namespace GetAvailableCampsites.Test
             };
 
             var request = MockRequestSimple(null, new List<GapRule>(), reservations);
-            var campsites = GetAvailableCampsitesProgram.GetAvailableCampsites(request);
+            var campsites = Campspot.GetAvailableCampsites(request);
         }
 
         [TestMethod]
@@ -198,7 +198,7 @@ namespace GetAvailableCampsites.Test
             };
 
             var request = MockRequestSimple(searchDates, gapRules, reservations);
-            var campsites = GetAvailableCampsitesProgram.RemoveUnavailableCampsites(request);
+            var campsites = Campspot.RemoveUnavailableCampsites(request);
 
             Assert.AreEqual("Campsite B", campsites.Select(x => x.Name).Single());
         }
@@ -230,7 +230,7 @@ namespace GetAvailableCampsites.Test
                 }
             };
 
-            var response = GetAvailableCampsitesProgram.HasValidReservations(reservations, gapRules);
+            var response = Campspot.HasValidReservations(reservations, gapRules);
             Assert.AreEqual(false, response);
         }
 
@@ -267,7 +267,7 @@ namespace GetAvailableCampsites.Test
                     StartDate = new DateTime(2016, 1, 17),
                     EndDate = new DateTime(2016, 1, 19)
                 },
-                 new Reservation
+                new Reservation
                 {
                     CampsiteId = 2,
                     StartDate = new DateTime(2016, 1, 20),
@@ -275,7 +275,7 @@ namespace GetAvailableCampsites.Test
                 }
             };
 
-            var response = GetAvailableCampsitesProgram.HasValidReservations(reservations, gapRules);
+            var response = Campspot.HasValidReservations(reservations, gapRules);
             Assert.AreEqual(true, response);
         }
 
@@ -306,7 +306,7 @@ namespace GetAvailableCampsites.Test
                 }
             };
 
-            var response = GetAvailableCampsitesProgram.HasValidReservations(reservations, gapRules);
+            var response = Campspot.HasValidReservations(reservations, gapRules);
             Assert.AreEqual(true, response);
         }
 
@@ -331,8 +331,53 @@ namespace GetAvailableCampsites.Test
                 }
             };
 
-            var response = GetAvailableCampsitesProgram.HasValidReservations(reservations, gapRules);
+            var response = Campspot.HasValidReservations(reservations, gapRules);
             Assert.AreEqual(true, response);
+        }
+
+        [TestMethod]
+        public void Should_Return_One_Campsite()
+        {
+            var searchDates = new SearchDates
+            {
+                StartDate = new DateTime(2016, 1, 10),
+                EndDate = new DateTime(2016, 1, 15)
+            };
+
+            var gapRules = new List<GapRule>
+            {
+                new GapRule
+                {
+                    GapSize = 2
+                }
+            };
+
+            var reservations = new List<Reservation>
+            {
+                new Reservation
+                {
+                    CampsiteId = 1,
+                    StartDate = new DateTime(2016, 1, 6),
+                    EndDate = new DateTime(2016, 1, 7)
+                },
+                new Reservation
+                {
+                    CampsiteId = 2,
+                    StartDate = new DateTime(2016, 1, 5),
+                    EndDate = new DateTime(2016, 1, 6)
+                },
+                new Reservation
+                {
+                    CampsiteId = 3,
+                    StartDate = new DateTime(2016, 1, 18),
+                    EndDate = new DateTime(2016, 1, 19)
+                }
+            };
+
+            var request = MockRequestSimple(searchDates, gapRules, reservations);
+            var response = Campspot.GetAvailableCampsites(request);
+            Assert.AreEqual("Campsite B", response.Select(x => x.Name).Single());
+
         }
     }
 }
