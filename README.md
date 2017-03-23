@@ -22,7 +22,7 @@ Now that we have our campsite list of *possible* campsites, we can begin adding 
 ```c#
 bool HasValidReservations(List<Reservation> reservations, List<GapRule> gapRules)
 ```
-This method looks at the gaps between all the reservations on that campsite, and checks against the gap rules. If all the gaps don't conflict with any of the gap rules, then this campsite is available for our searched reservation.
+This method looks at the gaps *adjaent to the new reservation* on that campsite, and checks against the gap rules. If all the gaps don't conflict with any of the gap rules, then this campsite is available for our searched reservation.
 
 After we have all the available campsites, we simply return this list.
 
