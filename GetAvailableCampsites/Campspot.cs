@@ -20,26 +20,42 @@ namespace GetAvailableCampsites
                 var campsites = GetAvailableCampsites(LoadJson(args[0]));
                 campsites.ForEach(x => Console.WriteLine(x.Name));
                 Console.ReadLine();
+                Environment.Exit(0);
             }
             else
             {
                 Console.WriteLine("This program only accepts 1 command line argument that must be the path of a valid .json file.");
                 Console.ReadLine();
-            }          
+                Environment.Exit(0);
+            }                   
         }
 
         public static GetAvailableCampsitesRequest LoadJson(string filename)
         {
+            
             using (var r = new StreamReader(filename))
             {
-                var json = r.ReadToEnd();
-                var item = JsonConvert.DeserializeObject<GetAvailableCampsitesRequest>(json);
-                return item;                          
+                try
+                {
+                    var json = r.ReadToEnd();
+                    var item = JsonConvert.DeserializeObject<GetAvailableCampsitesRequest>(json);
+                    return item;
+                }
+                catch
+                {
+                    Console.WriteLine("Please specify a valid .json file as an argument");
+                    return null;
+                }                                      
             }
         }
 
         public static void ValidateRequest(GetAvailableCampsitesRequest request)
         {
+            if (request == null)
+            {
+                throw new ArgumentException("You must submit a valid request");
+            }
+
             if (request.Search == null)
             {
                 throw new ArgumentException("You must submit search dates");
