@@ -7,7 +7,7 @@ Because I developed this program using .NET, my solution can only be run on Wind
 
 ## b. A high-level description of your approach to solving the problem
 My solution was designed specifically to be used as a web service. I have included all the models within the request for ease of use and code readability. The main method that is called is the following:
-```c#
+```C#
 List<Campsite> GetAvailableCampsites(GetAvailableCampsitesRequest request)
 ```
 
