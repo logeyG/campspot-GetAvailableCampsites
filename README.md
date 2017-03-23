@@ -3,6 +3,8 @@
 ## a. How to build and run your program and tests
 Because I developed this program using .NET, my solution can only be run on Windows. You also need to install Visual Studio Community 2015+ to be able to use the programs required.
 
+First, [download the releases[(https://github.com/logeyG/campspot-GetAvailableCampsites/releases/tag/1.0) for the test project and the main program. Extract these folders to a local directory, hereby referred to as `~`.
+
 ### To run the automated tests
 1. Open up the Developer Command Prompt for Visual Studio which is installed with the Visual Studio installation
 2. Navigate to `C:\Program Files (x86)\Microsoft Visual Studio [VS Version #]\Common7\IDE\CommonExtensions\Microsoft\TestWindow`
