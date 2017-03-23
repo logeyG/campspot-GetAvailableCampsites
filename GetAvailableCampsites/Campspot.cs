@@ -31,8 +31,7 @@ namespace GetAvailableCampsites
         }
 
         public static GetAvailableCampsitesRequest LoadJson(string filename)
-        {
-            
+        {         
             using (var r = new StreamReader(filename))
             {
                 try
@@ -100,7 +99,6 @@ namespace GetAvailableCampsites
 
         public static bool HasValidReservations(List<Reservation> reservations, List<GapRule> gapRules)
         {
-
             if (reservations.Count == 1)
                 return true;
 
