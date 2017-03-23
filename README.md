@@ -22,7 +22,7 @@ My solution was designed specifically to be used as a web service. I have includ
 List<Campsite> GetAvailableCampsites(GetAvailableCampsitesRequest request)
 ```
 
-As you can see, the method accepts a request that is an object representation of the input .json file, and returns a list of available campsites.
+The method accepts a request that is an object representation of the input .json file, and returns a list of available campsites.
 
 First, before we begin checking each campsite for validity, we can remove campsites that currently have a reservation during the time period we are searching for. This is done by calling the following method:
 ```c#
