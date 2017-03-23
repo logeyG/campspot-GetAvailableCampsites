@@ -5,11 +5,11 @@ Because I developed this program using .NET, my solution can only be run on Wind
 
 ### To run the automated tests
 1. Open up the Developer Command Prompt for Visual Studio which is installed with the Visual Studio installation
-2. Navigate to C:\Program Files (x86)\Microsoft Visual Studio [VS Version #]\Common7\IDE\CommonExtensions\Microsoft\TestWindow
+2. Navigate to `C:\Program Files (x86)\Microsoft Visual Studio [VS Version #]\Common7\IDE\CommonExtensions\Microsoft\TestWindow`
 3. run `Vstest.console.exe ~\GetAvailableCampsites.Test.Release\Release\GetAvailableCampsites.Test.dll`
 
 ### To run the program
-1. Using any command prompt, navigate to ~\GetAvailableCampsites.Release\Release
+1. Using any command prompt, navigate to `~\GetAvailableCampsites.Release\Release`
 2. run `GetAvailableCampsites.exe [.json file]`
 
 ## b. A high-level description of your approach to solving the problem
