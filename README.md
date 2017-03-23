@@ -17,7 +17,7 @@ First, [download the releases](https://github.com/logeyG/campspot-GetAvailableCa
 Alternatively, these can both be run from Visual Studio by downloading the source code and opening the solution.
 
 ## b. A high-level description of your approach to solving the problem
-My solution was designed specifically to be used as a web service. I have included all the models within the request for ease of use and code readability. The main method that is called is the following:
+My solution was designed specifically with a web service call in mind. I have included all the models within the request for ease of use and code readability. The main method that is called is the following:
 ```C#
 List<Campsite> GetAvailableCampsites(GetAvailableCampsitesRequest request)
 ```
