@@ -5,14 +5,14 @@ Because I developed this program using .NET, my solution can only be run on Wind
 
 First, [download the releases](https://github.com/logeyG/campspot-GetAvailableCampsites/releases/tag/1.0) for the test project and the main program. Extract these folders to a local directory, hereby referred to as `~`.
 
+### To run the program
+1. Using any command prompt, navigate to `~\GetAvailableCampsites.Release\Release`
+2. run `GetAvailableCampsites.exe [.json file]`
+
 ### To run the automated tests
 1. Open up the Developer Command Prompt for Visual Studio which is installed with the Visual Studio installation
 2. Navigate to `C:\Program Files (x86)\Microsoft Visual Studio [VS Version #]\Common7\IDE\CommonExtensions\Microsoft\TestWindow`
 3. run `Vstest.console.exe ~\GetAvailableCampsites.Test.Release\Release\GetAvailableCampsites.Test.dll`
-
-### To run the program
-1. Using any command prompt, navigate to `~\GetAvailableCampsites.Release\Release`
-2. run `GetAvailableCampsites.exe [.json file]`
 
 ## b. A high-level description of your approach to solving the problem
 My solution was designed specifically to be used as a web service. I have included all the models within the request for ease of use and code readability. The main method that is called is the following:
