@@ -9,7 +9,7 @@ First, [download the releases](https://github.com/logeyG/campspot-GetAvailableCa
 1. Using any command prompt, navigate to `~\GetAvailableCampsites.Release\Release`
 2. run `GetAvailableCampsites.exe [.json file]`
 
-### To run the automated tests
+### To run the automated tests ([MSDN Article](https://msdn.microsoft.com/en-us/library/jj155800.aspx))
 1. Open up the Developer Command Prompt for Visual Studio which is installed with the Visual Studio installation
 2. Navigate to `C:\Program Files (x86)\Microsoft Visual Studio [VS Version #]\Common7\IDE\CommonExtensions\Microsoft\TestWindow`
 3. run `Vstest.console.exe ~\GetAvailableCampsites.Test.Release\Release\GetAvailableCampsites.Test.dll`
